@@ -32,5 +32,7 @@ number=$SGE_TASK_ID
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia -p auto --project=$BASE main.jl $BASE
+cp $BASE/Manifest.toml $TMPDIR/
+cp $BASE/Project.toml $TMPDIR/
+julia -p auto --project=$BASE main.jl
 mv results.jld2 $SAVE/results_multi.jld2
