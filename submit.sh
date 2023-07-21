@@ -4,7 +4,7 @@
 #$ -l h_rt=24:00:00
 
 # Request a single core
-#$ -pe smp 1
+#$ -pe smp 5
 
 # Request RAM
 #$ -l mem=100G
@@ -32,5 +32,5 @@ number=$SGE_TASK_ID
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia --project=$BASE main.jl
-mv results.jld2 $SAVE/results_x.jld2
+julia -p auto --project=$BASE main.jl $BASE
+mv results.jld2 $SAVE/results_multi.jld2
