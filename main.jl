@@ -13,7 +13,7 @@ function main()
     axis = 3
 
     outfile = "Results_3.jld2"
-    rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "Ising")
+    rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "Ising", axis)
     jldsave(outfile; collective_spin = rv1, average = rv2)
 end
 
