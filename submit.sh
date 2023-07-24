@@ -20,7 +20,7 @@
 #$ -wd /home/ucanede/Scratch/dissipative_model_2
 
 # Job name
-#$ -N collective_spin
+#$ -N DISSIPATIVE
 
 
 BASE=$PWD
