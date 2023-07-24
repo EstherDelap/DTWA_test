@@ -20,7 +20,7 @@
 #$ -wd /home/ucanede/Scratch/dissipative_model_2
 
 # Job name
-#$ -N DISSIPATIVE
+#$ -N OTHER
 
 
 BASE=$PWD
@@ -33,4 +33,4 @@ number=$SGE_TASK_ID
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
 julia --project=$BASE main.jl
-mv Results_new.jld2 $SAVE/results_1.jld2
+mv Results_newer.jld2 $SAVE/results_2.jld2
