@@ -11,7 +11,7 @@ function main()
     Ω = 5
     α = 0
 
-    outfile = "Results_3.jld2"
+    outfile = "Results_new.jld2"
     rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, "Ising")
     jldsave(outfile; collective_spin = rv1, average = rv2)
 end
