@@ -19,4 +19,4 @@ function main(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, α, method, axis, dir)
     jldsave(outfile; α=α, Γ_deph=Γ_deph, Γ_decay=Γ_decay, Ω = Ω, axis = axis, dir = dir, collective_spin = rv1, average = rv2)
 end
 
-main(ARGS[1],ARGS[2], ARGS[3], ARGS[4], ARGS[5], ARGS[6], ARGS[7], ARGS[8], ARGS[9], ARGS[10])
+main([parse(Int64,ARGS[1]),parse(Int64,ARGS[2]),parse(Int64,ARGS[3])],parse(Int64,ARGS[4]),parse(Int64,ARGS[5]), parse(Float64,ARGS[6]), parse(Float64,ARGS[7]), parse(Float64,ARGS[8]), parse(Float64,ARGS[9]), ARGS[10], parse(Int64,ARGS[11]), parse(Float64,ARGS[12]))
