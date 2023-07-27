@@ -54,6 +54,7 @@ v11="`sed -n ${number}p $paramfile | awk '{print $12}'`" #α
 v12="`sed -n ${number}p $paramfile | awk '{print $13}'`" #method
 v13="`sed -n ${number}p $paramfile | awk '{print $14}'`" #axis 
 v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
+
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
 julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12 $v13 $v14
