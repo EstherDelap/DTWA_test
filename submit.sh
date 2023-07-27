@@ -25,7 +25,7 @@
 #$ -wd /home/ucanede/Scratch/dissipative_model_2
 
 # Job name
-#$ -N OTHER
+#$ -N NEW
 
 # Parse parameter file to get variables.
 number=$SGE_TASK_ID
