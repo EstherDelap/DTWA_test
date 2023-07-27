@@ -31,26 +31,30 @@
 number=$SGE_TASK_ID
 
 BASE=$PWD
-paramfile=$BASE/input/params.txt
+paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params.txt
 SAVE=$BASE/results
 
 module load julia/1.9.1
 
 filename="`sed -n ${number}p $paramfile | awk '{print $1}'`"
 v1="`sed -n ${number}p $paramfile | awk '{print $2}'`" #dim
-v2="`sed -n ${number}p $paramfile | awk '{print $3}'`" #N
-v3="`sed -n ${number}p $paramfile | awk '{print $4}'`" #number_repeats
-v4="`sed -n ${number}p $paramfile | awk '{print $5}'`" #Γ_deph 
-v5="`sed -n ${number}p $paramfile | awk '{print $6}'`" #Γ_decay
-v6="`sed -n ${number}p $paramfile | awk '{print $7}'`" #Ω
-v7="`sed -n ${number}p $paramfile | awk '{print $8}'`" #α
-v8="`sed -n ${number}p $paramfile | awk '{print $9}'`" #method 
-v9="`sed -n ${number}p $paramfile | awk '{print $10}'`" #axis 
-v10="`sed -n ${number}p $paramfile | awk '{print $11}'`" #dir
-v11="`sed -n ${number}p $paramfile | awk '{print $12}'`" #axis 
-v12="`sed -n ${number}p $paramfile | awk '{print $13}'`" #dir
+v2="`sed -n ${number}p $paramfile | awk '{print $3}'`" #dim
+v3="`sed -n ${number}p $paramfile | awk '{print $4}'`" #dim
 
+v4="`sed -n ${number}p $paramfile | awk '{print $5}'`" #N
+v5="`sed -n ${number}p $paramfile | awk '{print $6}'`" #number_repeats
+v6="`sed -n ${number}p $paramfile | awk '{print $7}'`" #Γ_deph 
+v7="`sed -n ${number}p $paramfile | awk '{print $8}'`" #Γ_decay
+v8="`sed -n ${number}p $paramfile | awk '{print $9}'`" #Ω
+
+v9="`sed -n ${number}p $paramfile | awk '{print $10}'`" #α
+v10="`sed -n ${number}p $paramfile | awk '{print $11}'`" #α 
+v11="`sed -n ${number}p $paramfile | awk '{print $12}'`" #α
+
+v12="`sed -n ${number}p $paramfile | awk '{print $13}'`" #method
+v13="`sed -n ${number}p $paramfile | awk '{print $14}'`" #axis 
+v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12
+julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12 $v13 $v14
 mv results.jld2 $SAVE/$filename 
