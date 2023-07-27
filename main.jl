@@ -3,11 +3,11 @@ using JLD2
 
 
 function main(dim, N, number_repeats, Γ_deph, Γ_decay, Ω, α1,α2, α3, method, axis, dir)
-    try 
-        a = parse(Int64,α1)
-        b = parse(Int64,α2)
-        c = parse(Int64,α3)
-    catch
+    
+    a = tryparse(Int64,α1)
+    b = trypayrse(Int64,α2)
+    c = tryparse(Int64,α3)
+    if a == nothing
         a = parse(Float64,α1)
         b = parse(Float64,α2)
         c = parse(Float64,α3)
