@@ -31,7 +31,7 @@
 number=$SGE_TASK_ID
 
 BASE=$PWD
-paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params.txt
+paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_2.txt
 SAVE=$BASE/results
 
 module load julia/1.9.1
