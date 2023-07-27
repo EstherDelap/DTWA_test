@@ -14,7 +14,7 @@ function main(dim, N, number_repeats, Γ_deph, Γ_decay, Ω, α1,α2, α3, metho
     end
     outfile = "results.jld2"
     rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, [a,b,c], method, axis, dir)
-    jldsave(outfile; α=α, Γ_deph=Γ_deph, Γ_decay=Γ_decay, Ω = Ω, axis = axis, dir = dir, collective_spin = rv1, average = rv2)
+    jldsave(outfile; α=[a,b,c], Γ_deph=Γ_deph, Γ_decay=Γ_decay, Ω = Ω, axis = axis, dir = dir, collective_spin = rv1, average = rv2)
 end
 
 
