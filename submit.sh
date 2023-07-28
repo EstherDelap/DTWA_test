@@ -15,7 +15,7 @@
 
 # Set up the job array.  In this instance we have requested 10000 tasks
 # numbered 1 to 10000.
-#$ -t 1-10
+#$ -t 1-21
 
 #$ -o output
 
@@ -31,8 +31,8 @@
 number=$SGE_TASK_ID
 
 BASE=$PWD
-paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_3.txt
-SAVE=$BASE/results
+paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_4.txt
+SAVE=$BASE/results/results4
 
 module load julia/1.9.1
 
@@ -58,4 +58,4 @@ v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
 julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12 $v13 $v14
-mv results.jld2 $SAVE/$filename 
+mv results.jld2 $SAVE/$filename
