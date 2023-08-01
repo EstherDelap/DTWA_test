@@ -15,7 +15,7 @@
 
 # Set up the job array.  In this instance we have requested 10000 tasks
 # numbered 1 to 10000.
-#$ -t 1-1
+#-t 1-1
 
 #$ -o output
 
@@ -28,7 +28,8 @@
 #$ -N XYZ
 
 # Parse parameter file to get variables.
-number=$SGE_TASK_ID
+#number=$SGE_TASK_ID
+number = 1
 
 BASE=$PWD
 paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_5.txt
