@@ -7,7 +7,7 @@ function main(dim, N, number_repeats, Γ_deph, Γ_decay, Ω, α1,α2, α3, metho
     a = tryparse(Int64,α1)
     b = tryparse(Int64,α2)
     c = tryparse(Int64,α3)
-    if a == nothing
+    if a === nothing
         a = parse(Float64,α1)
         b = parse(Float64,α2)
         c = parse(Float64,α3)
