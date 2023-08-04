@@ -33,7 +33,7 @@ number = 1
 
 BASE=$PWD
 paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_5.txt
-SAVE=$BASE/results
+SAVE=/home/ucanede/Scratch/dissipative_model_2/results
 
 module load julia/1.9.1
 
@@ -59,4 +59,4 @@ v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
 julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12 $v13 $v14
-mv results.jld2 $SAVE/$filename
+mv results.jld2 /home/ucanede/Scratch/dissipative_model_2/results/$filename
