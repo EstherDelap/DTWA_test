@@ -28,8 +28,8 @@
 #$ -N XYZ
 
 # Parse parameter file to get variables.
-#number=$SGE_TASK_ID
-number = 1
+number=$SGE_TASK_ID
+#number = 1
 
 BASE=$PWD
 paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_5.txt
