@@ -12,7 +12,7 @@ function main(dim, N, number_repeats, Γ_deph, Γ_decay, Ω, α1,α2, α3, metho
         b = parse(Float64,α2)
         c = parse(Float64,α3)
     end
-    outfile = "results4.jld2"
+    outfile = "results5.jld2"
     rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, [a,b,c], method, axis, dir)
     jldsave(outfile; α=[a,b,c], Γ_deph=Γ_deph, Γ_decay=Γ_decay, Ω = Ω, axis = axis, dir = dir, collective_spin = rv1, average = rv2)
 end

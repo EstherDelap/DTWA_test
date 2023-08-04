@@ -15,7 +15,7 @@
 
 # Set up the job array.  In this instance we have requested 10000 tasks
 # numbered 1 to 10000.
-#-t 1-2
+#-t 1-4
 
 #$ -o output
 
@@ -32,8 +32,8 @@
 number = 1
 
 BASE=$PWD
-paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_5.txt
-SAVE=$BASE/results/results4
+paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_2.txt
+SAVE=$BASE/results/results5
 
 module load julia/1.9.1
 
