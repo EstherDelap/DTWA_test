@@ -33,7 +33,7 @@ number = 1
 
 BASE=$PWD
 paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_5.txt
-SAVE=$BASE/results/results4
+SAVE=$BASE/results/results_new
 
 module load julia/1.9.1
 
