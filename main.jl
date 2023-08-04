@@ -19,6 +19,6 @@ function main(dim)
     jldsave(outfile; dim=dim)
 end
 
-
 #main([parse(Int64,ARGS[1]),parse(Int64,ARGS[2]),parse(Int64,ARGS[3])],parse(Int64,ARGS[4]),parse(Int64,ARGS[5]), parse(Float64,ARGS[6]), parse(Float64,ARGS[7]), parse(Float64,ARGS[8]), ARGS[9], ARGS[10], ARGS[11], ARGS[12], parse(Int64,ARGS[13]), parse(Int64,ARGS[14]))
-main([parse(Int64,ARGS[1]),parse(Int64,ARGS[2]),parse(Int64,ARGS[3])])
+#main([parse(Int64,ARGS[1]),parse(Int64,ARGS[2]),parse(Int64,ARGS[3])])
+main([ARGS[1],ARGS[2],ARGS[3]])
