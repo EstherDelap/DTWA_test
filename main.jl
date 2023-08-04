@@ -3,16 +3,16 @@ using JLD2
 
 
 function main(dim, N, number_repeats, Γ_deph, Γ_decay, Ω, α1,α2, α3, method, axis, dir)
-    
-    a = tryparse(Int64,α1)
-    b = tryparse(Int64,α2)
-    c = tryparse(Int64,α3)
-    if a === nothing
+    if method === "Ising"
+        a = parse(Int64,α1)
+        b = parse(Int64,α2)
+        c = parse(Int64,α3)
+    else
         a = parse(Float64,α1)
         b = parse(Float64,α2)
         c = parse(Float64,α3)
     end
-    outfile = "results5.jld2"
+    outfile = "results6.jld2"
     rv1, rv2= DTWA.repeated_euler(dim, N,number_repeats,Γ_deph, Γ_decay,Ω, [a,b,c], method, axis, dir)
     jldsave(outfile; α=[a,b,c], Γ_deph=Γ_deph, Γ_decay=Γ_decay, Ω = Ω, axis = axis, dir = dir, collective_spin = rv1, average = rv2)
 end
