@@ -52,9 +52,9 @@ module load julia/1.9.1
 #v10="`sed -n ${number}p $paramfile | awk '{print $11}'`" #α 
 #v11="`sed -n ${number}p $paramfile | awk '{print $12}'`" #α
 
-v12="`sed -n ${number}p $paramfile | awk '{print $13}'`" #method
-v13="`sed -n ${number}p $paramfile | awk '{print $14}'`" #axis 
-v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
+#v12="`sed -n ${number}p $paramfile | awk '{print $13}'`" #method
+#v13="`sed -n ${number}p $paramfile | awk '{print $14}'`" #axis 
+#v14="`sed -n ${number}p $paramfile | awk '{print $15}'`" #dir
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
