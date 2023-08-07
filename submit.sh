@@ -36,7 +36,7 @@ paramfile=$BASE/input/params_6.txt
 SAVE=$Base/results
 
 module load julia/1.9.1
-filename=sed -n ${number}p $paramfile | awk '{print $1}'
+filename=`sed -n ${number}p $paramfile | awk '{print $1}'`
 #filename="`sed -n ${number}p $paramfile | awk '{print $1}'`"
 #v1="`sed -n ${number}p $paramfile | awk '{print $2}'`" #dim
 #v2="`sed -n ${number}p $paramfile | awk '{print $3}'`" #dim
