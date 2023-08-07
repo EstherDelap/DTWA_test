@@ -32,8 +32,8 @@ number=$SGE_TASK_ID
 #number = 1
 
 BASE=$PWD
-paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_6.txt
-SAVE=/home/ucanede/Scratch/dissipative_model_2/results
+paramfile=$BASE/input/params_6.txt
+SAVE=$Base/results
 
 module load julia/1.9.1
 index=`sed -n ${number}p $paramfile | awk '{print $2}'`
@@ -60,4 +60,4 @@ cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
 #julia --project=$BASE main.jl $v1 $v2 $v3 $v4 $v5 $v6 $v7 $v8 $v9 $v10 $v11 $v12 $v13 $v14
 julia --project=$BASE main.jl $index "4" "4" "100" "100" "0.0" "0.0025" "0" "0" "0" "0" "Ising" "1" "1"
-mv results.jld2 /home/ucanede/Scratch/dissipative_model_2/results/1.jld2
+mv results.jld2 $SAVE/2.jld2
