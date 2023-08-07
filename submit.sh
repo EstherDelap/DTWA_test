@@ -25,14 +25,13 @@
 #$ -wd /home/ucanede/Scratch/dissipative_model_2
 
 # Job name 
-#$ -N Ising
+#$ -N XYZ_take1
 
 # Parse parameter file to get variables.
 number=$SGE_TASK_ID
-#number = 1
 
 BASE=$PWD
-paramfile=$BASE/input/params_6.txt
+paramfile=$BASE/input/params_5.txt
 SAVE=$Base/results
 
 module load julia/1.9.1
