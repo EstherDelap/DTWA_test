@@ -36,7 +36,7 @@ paramfile=/home/ucanede/Scratch/dissipative_model_2/input/params_6.txt
 SAVE=/home/ucanede/Scratch/dissipative_model_2/results
 
 module load julia/1.9.1
-index=`sed -n ${number}p $paramfile | awk '{print $1}'`
+index=`sed -n ${number}p $paramfile | awk '{print $2}'`
 #filename="`sed -n ${number}p $paramfile | awk '{print $1}'`"
 #v1="`sed -n ${number}p $paramfile | awk '{print $2}'`" #dim
 #v2="`sed -n ${number}p $paramfile | awk '{print $3}'`" #dim
